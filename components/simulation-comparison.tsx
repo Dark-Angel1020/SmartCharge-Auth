@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -40,7 +38,7 @@ export function SimulationComparison({ simulationResults, onClearHistory }: Simu
         return prev.filter((simId) => simId !== id)
       } else {
         if (prev.length >= maxSelections) {
-          return [...prev.slice(1), id] // Remove first, add new
+          return [...prev.slice(1), id] 
         }
         return [...prev, id]
       }
@@ -62,7 +60,7 @@ export function SimulationComparison({ simulationResults, onClearHistory }: Simu
       return
     }
 
-    // Create comparison CSV
+    
     const headers = [
       "Simulation",
       "EVs",
@@ -123,15 +121,15 @@ export function SimulationComparison({ simulationResults, onClearHistory }: Simu
     }
 
     try {
-      // Use html2canvas to capture the chart
+     
       const html2canvas = (await import("html2canvas")).default
       const canvas = await html2canvas(chartElement, {
         backgroundColor: "#ffffff",
-        scale: 2, // Higher quality
+        scale: 2, 
         useCORS: true,
       })
 
-      // Convert to blob and download
+    
       canvas.toBlob((blob) => {
         if (blob) {
           const url = URL.createObjectURL(blob)
@@ -169,7 +167,7 @@ export function SimulationComparison({ simulationResults, onClearHistory }: Simu
     setShowComparisonModal(true)
   }
 
-  // Prepare comparison chart data
+  
   const comparisonData = getSelectedSimulations().map((sim, index) => ({
     name: sim.name,
     throughput: Number.parseFloat((sim.finalMetrics.throughput * 60).toFixed(1)),
@@ -187,7 +185,7 @@ export function SimulationComparison({ simulationResults, onClearHistory }: Simu
     color: `hsl(${(index * 60) % 360}, 70%, 50%)`,
   }))
 
-  // Prepare trend comparison data
+ 
   const maxLength = Math.max(...getSelectedSimulations().map((sim) => sim.metricsHistory.length))
   const trendData = Array.from({ length: maxLength }, (_, i) => {
     const dataPoint: any = { time: i }
@@ -203,7 +201,7 @@ export function SimulationComparison({ simulationResults, onClearHistory }: Simu
     return dataPoint
   })
 
-  // Comparison Modal Component
+ 
   const ComparisonModal = () => {
     if (!showComparisonModal) return null
 
@@ -743,7 +741,7 @@ export function SimulationComparison({ simulationResults, onClearHistory }: Simu
     )
   }
 
-  // Main component return
+
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
