@@ -1,5 +1,3 @@
-"use client"
-
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Clock, ArrowRight } from "lucide-react"
 import type { Message } from "@/app/page"
