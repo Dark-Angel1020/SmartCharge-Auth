@@ -114,21 +114,8 @@ SmartCharge-Auth/
 │   └── globals.css                 # Global styles
 │
 ├── 📁 components/                   # React Components
-│   ├── 📁 ui/                      # Reusable UI components
-│   │   ├── badge.tsx              # Badge component
-│   │   ├── button.tsx             # Button component
-│   │   ├── card.tsx               # Card component
-│   │   ├── chart.tsx              # Chart component
-│   │   ├── input.tsx              # Input field
-│   │   ├── label.tsx              # Form labels
-│   │   ├── progress.tsx           # Progress bar
-│   │   ├── scroll-area.tsx        # Scrollable area
-│   │   ├── slider.tsx             # Slider for configs
-│   │   ├── tabs.tsx               # Tab navigation
-│   │   ├── toast.tsx              # Toast display
-│   │   ├── toaster.tsx            # Toast wrapper
-│   │   └── use-toast.ts           # Toast hook
-│   │
+│   ├── 📁 ui                        # Reusable UI components
+│   │  
 │   ├── message-log.tsx            # Message exchange log
 │   ├── network-topology.tsx       # Network visualization
 │   ├── performance-metrics.tsx    # Metrics dashboard
@@ -137,11 +124,7 @@ SmartCharge-Auth/
 │   ├── simulation-comparison.tsx  # Simulation comparison view
 │   └── simulation-controls.tsx    # Controls for configuring simulations
 │
-├── 📁 docs/                        # Documentation
-│   ├── API.md                     # API documentation
-│   ├── DEPLOYMENT.md              # Deployment steps
-│   └── PROTOCOL.md                # PUFF protocol details
-│
+|
 ├── 📁 hooks/                       # Custom React Hooks
 │   ├── use-mobile.tsx             # Detect mobile view
 │   └── use-toast.ts               # Hook for toast messages
@@ -150,19 +133,6 @@ SmartCharge-Auth/
 │   └── utils.ts                   # General helpers
 │
 ├── 📁 public/                      # Static files
-│   ├── favicon.ico                # Favicon
-│   ├── logo.svg                   # App logo
-│   └── 📁 images/                  # Placeholder and UI images
-│
-├── 📁 tests/                       # Testing
-│   ├── 📁 __tests__/              # Unit test files
-│   ├── 📁 e2e/                    # End-to-end test cases
-│   └── setup.ts                   # Test environment config
-│
-├── 📁 types/                       # TypeScript type definitions
-│   ├── network.ts                 # Network data types
-│   ├── protocol.ts                # Protocol types
-│   └── simulation.ts              # Simulation-related types
 │
 ├── .eslintrc.json                 # Linting config
 ├── .gitignore                     # Ignored files/folders
