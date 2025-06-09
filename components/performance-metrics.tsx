@@ -1,5 +1,3 @@
-"use client"
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Clock, Shield, Activity, Zap, Lock, TrendingUp, CheckCircle, AlertTriangle } from "lucide-react"
